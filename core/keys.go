@@ -92,10 +92,18 @@ func (prv PrivateKey) PublicKey() PublicKey {
 	return elliptic.MarshalCompressed(ecdsa, ecdsa.X, ecdsa.Y)
 }
 
-func (pub PublicKey) ToString() string {
-	return hex.EncodeToString(pub)
+func (prv PrivateKey) ToString() string {
+	return hex.EncodeToString(prv.ECDSA.D.Bytes())
 }
 
 func (pub PublicKey) Address() PublicAddress {
 	return GeneratePublicAddressFromPublicKey(pub)
+}
+
+func (pub PublicKey) ToString() string {
+	return hex.EncodeToString(pub)
+}
+
+func (addr PublicAddress) ToString() string {
+	return hex.EncodeToString(addr[:])
 }
