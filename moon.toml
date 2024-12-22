@@ -1,0 +1,15 @@
+[info]
+command = "moon"
+short = "Moon is a local-hosted blockchain to be explored from an interactive CLI"
+long = "Moon is a local-hosted blockchain explorable from an interactive command-line interface (CLI) designed as a playground for Bitcoin (BTC) experimentation. It allows you to create new nodes that connect to the genesis block, perform transactions, and explore the nodes in the blockchain. With Moon, you can simulate and test various blockchain activities in a controlled environment, making it an ideal tool for learning, testing, and experimenting with Bitcoin's core functionalities."
+
+license = "MIT"
+author = "R. Ávila"
+version = "0.0.1"
+repository = "https://github.com/avila-r/moon"
+
+[advanced]
+debug = true
+
+[genesis]
+port = 8000
